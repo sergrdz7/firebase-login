@@ -20,7 +20,7 @@ class Authen extends Component {
     //Get value by this.ref.whatref.thevalueofit
     const email = this.refs.email.value;
     const password = this.refs.password.value;
-    // console.log(email+" and " +password);
+    
 
     //Send query to firebase with a promise
     const auth = firebase.auth();
