@@ -38,7 +38,7 @@ class Authen extends Component {
 
     .catch(e => {
       var err = e.message;
-      console.log(err);
+      // console.log(err);
       this.setState({err: err});
     });
   }
@@ -64,7 +64,7 @@ class Authen extends Component {
     })
     .catch(e => {
       var err = e.message;
-      console.log(err);
+      // console.log(err);
       this.setState({err:err});
     });
 
