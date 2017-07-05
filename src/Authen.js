@@ -20,7 +20,7 @@ class Authen extends Component {
     //Get value by this.ref.whatref.thevalueofit
     const email = this.refs.email.value;
     const password = this.refs.password.value;
-    console.log(email+" and " +password);
+    // console.log(email+" and " +password);
 
     //Send query to firebase with a promise
     const auth = firebase.auth();
@@ -59,7 +59,7 @@ class Authen extends Component {
       firebase.database().ref('users/' + user.uid).set({
         email: user.email
       });
-      console.log(user);
+      // console.log(user);
       this.setState({err: err});
     })
     .catch(e => {
@@ -88,7 +88,7 @@ class Authen extends Component {
       var user = result.user;
       var logout = document.getElementById('logout');
       logout.classList.remove('hide');
-      console.log(result);
+      // console.log(result);
       firebase.database().ref('users/' + user.uid).set({
         email: user.email,
         name: user.displayName
@@ -99,7 +99,7 @@ class Authen extends Component {
     })
     .catch (e => {
       var msg = e.message;
-      console.log(msg);
+      // console.log(msg);
     });
 
   }
